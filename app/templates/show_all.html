@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+所有电影
+{% endblock %}
+
+{% block body %}
+<h3>共{{ length }}条记录</h3>
+{% for movie in movies %}
+<li>
+	<h4>{{movie.title}} {{ movie.year}}年</h4>
+	{{ movie.stemmed }}
+</li>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+统计
+{% endblock %}
+
+{% block body %}
+{% for common in commons %}
+<li>
+	<span>{{ common[1]}}</span><span> {{ common[0]}}</span>
+</li>
+{% endfor %}
+{% endblock %}
