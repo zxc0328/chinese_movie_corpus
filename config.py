@@ -25,7 +25,7 @@ class Config:
 class DevelopmentConfig(Config):
     """开发环境配置类"""
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or         'mysql+pymysql://corpus:zjx6352120@115.28.152.113:3306/corpus'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or         'sqlite:///' + os.path.join(basedir, 'corpus.sqlite')
 
 
 class TestingConfig(Config):
